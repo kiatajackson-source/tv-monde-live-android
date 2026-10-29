@@ -1,0 +1,45 @@
+name: Construire TV MONDE LIVE APK
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v6
+
+      - name: Installer Java 17
+        uses: actions/setup-java@v6
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Préparer Gradle 8.13
+        uses: gradle/actions/setup-gradle@v6
+        with:
+          gradle-version: '8.13'
+          cache-provider: basic
+
+      - name: Préparer le SDK Android
+        uses: android-actions/setup-android@v4
+
+      - name: Installer Android 36 et Build Tools
+        run: sdkmanager --install "platforms;android-36" "build-tools;36.0.0"
+
+      - name: Construire l'APK de test
+        run: gradle --no-daemon assembleDebug
+
+      - name: Publier l'APK comme artefact téléchargeable
+        uses: actions/upload-artifact@v4
+        with:
+          name: TV-MONDE-LIVE-APK-TEST
+          path: app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14

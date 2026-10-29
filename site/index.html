@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071323">
+  <title>TV MONDE LIVE — Application Android</title>
+  <style>
+    :root{color-scheme:dark;--bg:#071323;--card:#10233b;--sky:#42c5ff;--muted:#a4b8cd;--white:#f3f8ff}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:radial-gradient(ellipse at top,#163657 0,#071323 57%);color:var(--white);min-height:100vh}
+    .wrap{max-width:900px;margin:0 auto;padding:26px 18px 55px}
+    header{display:flex;align-items:center;gap:14px;padding:18px 0 34px}
+    .logo{width:56px;height:56px;display:grid;place-items:center;background:var(--sky);color:var(--bg);border-radius:17px;font-size:25px;font-weight:900}
+    h1{font-size:clamp(25px,6vw,45px);line-height:1.05;margin:0;letter-spacing:-1px}
+    .sub{color:var(--muted);font-size:12px;letter-spacing:1.3px;margin-top:8px}
+    .hero{border:1px solid #284763;background:linear-gradient(130deg,#122d49,#0c1d32 70%);border-radius:26px;padding:clamp(24px,5vw,46px);box-shadow:0 22px 60px #0004}
+    .pill{display:inline-block;color:var(--sky);border:1px solid #32779e;border-radius:999px;padding:7px 12px;font-size:12px;font-weight:700}
+    h2{font-size:clamp(27px,5vw,38px);line-height:1.13;margin:21px 0 12px}
+    p{line-height:1.65;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin:24px 0}
+    .card{background:var(--card);border:1px solid #23405d;padding:17px;border-radius:17px}
+    .card strong{display:block;color:var(--white);margin-bottom:6px}
+    .card span{color:var(--muted);font-size:13px;line-height:1.5;display:block}
+    .notice{border-left:3px solid var(--sky);padding:10px 15px;background:#10243a;border-radius:0 12px 12px 0;margin-top:22px}
+    code{color:var(--sky);overflow-wrap:anywhere}
+    footer{padding-top:22px;color:var(--muted);font-size:12px}
+    a{color:var(--sky)}
+  </style>
+</head>
+<body><main class="wrap">
+  <header><div class="logo">▶</div><div><h1>TV MONDE LIVE</h1><div class="sub">LA TÉLÉVISION DU MONDE, SUR UN ÉCRAN</div></div></header>
+  <section class="hero">
+    <span class="pill">PROJET ANDROID • VERSION DE TEST</span>
+    <h2>Vos chaînes, un seul lecteur.</h2>
+    <p>TV MONDE LIVE est un projet d'application Android avec lecteur vidéo intégré, recherche, catégories et favoris. Le catalogue doit être rempli avec des flux officiels dont la diffusion est autorisée.</p>
+    <div class="grid">
+      <div class="card"><strong>📺 Lecteur intégré</strong><span>HLS et contrôles vidéo dans l'application.</span></div>
+      <div class="card"><strong>🔎 Recherche</strong><span>Retrouvez une chaîne par son nom ou son pays.</span></div>
+      <div class="card"><strong>⭐ Favoris</strong><span>Gardez vos chaînes préférées sur le téléphone.</span></div>
+      <div class="card"><strong>🖥️ HD selon la source</strong><span>Jusqu'à 1920 × 1080 si le flux, le réseau et l'appareil le permettent.</span></div>
+    </div>
+    <div class="notice"><strong>À savoir</strong><p>Le direct nécessite Internet et consomme des données. Le flux inclus dans la version de test est uniquement une démonstration technique, pas une chaîne TV. Cette application est gratuite et sans abonnement ; le téléchargement d'une application gratuite ne génère pas automatiquement un revenu pour son créateur.</p></div>
+  </section>
+  <footer>Page d'information du projet TV MONDE LIVE. Le code source et la génération de l'APK se gèrent dans le dépôt GitHub associé.</footer>
+</main></body>
+</html>
